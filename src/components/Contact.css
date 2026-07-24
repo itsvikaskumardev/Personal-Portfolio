@@ -1,0 +1,131 @@
+.contact__grid {
+  display: grid;
+  grid-template-columns: 1.3fr 0.9fr;
+  gap: 48px;
+}
+
+.contact__form {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.contact__form label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 14px;
+  color: var(--text-dim);
+}
+
+.contact__form input,
+.contact__form textarea {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 14px 16px;
+  color: var(--text);
+  font-family: inherit;
+  font-size: 15px;
+  resize: vertical;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact__form input:focus,
+.contact__form textarea:focus {
+  outline: none;
+  border-color: var(--violet);
+  box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.18);
+}
+
+.contact__submit {
+  border: none;
+  width: 100%;
+  margin-top: 4px;
+}
+
+.contact__info {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.contact__info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.contact__info-icon {
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+
+.contact__info-item h4 {
+  font-size: 15px;
+  margin-bottom: 4px;
+}
+
+.contact__info-item p {
+  color: var(--text-dim);
+  font-size: 14px;
+}
+
+.contact__socials h4 {
+  font-size: 15px;
+  margin-bottom: 14px;
+}
+
+.contact__social-links {
+  display: flex;
+  gap: 12px;
+}
+
+.contact__social-link {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  transition: transform 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.contact__social-link:hover {
+  transform: translateY(-3px);
+  border-color: var(--violet-bright);
+  color: var(--violet-bright);
+}
+
+.footer {
+  margin-top: 100px;
+  padding-top: 32px;
+  border-top: 1px solid var(--border);
+  text-align: center;
+}
+
+.footer p {
+  color: var(--text-faint);
+  font-size: 13px;
+  padding-bottom: 8px;
+}
+
+@media (max-width: 860px) {
+  .contact__grid {
+    grid-template-columns: 1fr;
+  }
+}
