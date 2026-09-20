@@ -1,6 +1,6 @@
 import ProjectCard from './ProjectCard.jsx'
 import './Projects.css'
-import hmsImage from '../assests/HMS-Image.jpg'
+import hmsImage from '../assests/HMS-Image.png'
 import codesyncImage from '../assests/CodeSync.jpg'
 import EkartImage from '../assests/Ekart.png'
 
@@ -12,8 +12,8 @@ const PROJECTS = [
     desc: 'A full-stack e-commerce platform featuring product management, user authentication, shopping cart functionality, order processing, and secure payment integration.',
     tags: ['React.js', 'Go', 'Gin', 'Redux', 'PostgreSQL'],
     gradient: 'linear-gradient(135deg, #6d28d9, #db2777)',
-    demoUrl: '#',
-    codeUrl: 'https://github.com/Vikas-Kumar-2004/Ekart-Ecommerce',
+    demoUrl: 'https://ekart-ecommerce-go.netlify.app/',
+    codeUrl: 'https://github.com/itsvikaskumardev/Ekart-Ecommerce',
     imageUrl: EkartImage,
   },
   {
@@ -21,8 +21,13 @@ const PROJECTS = [
     desc: 'A full-stack hospital management application for managing patients, doctors, appointments, and medical records with secure authentication and an intuitive user interface.',
     tags: ['React.js', 'Express.js', 'Node.js', 'MongoDB'],
     gradient: 'linear-gradient(135deg, #7c3aed, #4f46e5)',
-    demoUrl: '#',
-    codeUrl: 'https://github.com/Vikas-Kumar-2004/Hospital-Management-System',
+
+
+    demoUrl: [
+      { name: 'Admin Dashboard', url: 'https://medicare-care-admin.netlify.app/' },
+      { name: 'Patient and Doctor Dashboard ', url: 'https://medicare-care.netlify.app/' }
+    ],
+    codeUrl: 'https://github.com/itsvikaskumardev/MediCare',
     imageUrl: hmsImage,
   },
   {

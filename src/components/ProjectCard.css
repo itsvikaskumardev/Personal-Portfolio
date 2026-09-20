@@ -73,3 +73,53 @@
   padding: 11px 16px;
   font-size: 14px;
 }
+
+.demo-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 10, 15, 0.8);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  opacity: 0;
+  animation: fadeIn 0.2s forwards;
+}
+
+.demo-modal {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  padding: 32px;
+  border-radius: 16px;
+  width: 90%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transform: translateY(20px);
+  animation: slideUp 0.2s forwards;
+}
+
+.demo-modal h4 {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.demo-modal-links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.demo-modal .close-btn {
+  margin-top: 10px;
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  to { transform: translateY(0); }
+}

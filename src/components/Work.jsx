@@ -8,12 +8,12 @@ const EXPERIENCE = [
     desc: 'Developing and maintaining REST APIs and ERP integrations, with a focus on performance, scalability, reliability, and clean architecture.',
   },
   // Remove the entry below unless you actually worked there.
-  {
-    role: 'Junior Developer',
-    org: 'StartUp Ventures',
-    period: '2019 — 2021',
-    desc: 'Built web applications and gained experience working on increasingly complex projects while expanding my technical skills.',
-  },
+  // {
+  //   role: 'Junior Developer',
+  //   org: 'StartUp Ventures',
+  //   period: '2019 — 2021',
+  //   desc: 'Built web applications and gained experience working on increasingly complex projects while expanding my technical skills.',
+  // },
 ];
 
 function Work() {
