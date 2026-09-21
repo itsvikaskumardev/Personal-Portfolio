@@ -17,7 +17,7 @@ const SKILL_GROUPS = [
     icon: '🛠️',
     title: 'Backend Development',
     desc: 'Creating robust server-side applications and RESTful / GraphQL APIs.',
-    tags: ['Node.js', 'Go', 'Express','.NET' ],
+    tags: ['Node.js', 'Go', 'Express', '.NET'],
   },
   {
     icon: '🗄️',
@@ -29,7 +29,7 @@ const SKILL_GROUPS = [
     icon: '☁️',
     title: 'Cloud & DevOps',
     desc: 'Deploying and managing applications in cloud environments.',
-    tags: ['AWS', 'Docker', 'Kubernetes', 'CI/CD'],
+    tags: ['Azure', 'Docker', 'CI/CD', 'GitHub Actions'],
   },
   {
     icon: '🧰',

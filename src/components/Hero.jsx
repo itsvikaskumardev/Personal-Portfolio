@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react'
 import './Hero.css'
-import resumePdf from '../assests/Vikas Kumar - Resume.pdf'
+import resumePdf from '../assests/Vikas_Kumar_Resume.pdf'
 
-const ROLES = ['Backend Developer', 'Web Developer', ]
+const ROLES = ['Backend Developer', 'Web Developer',]
 
 function useTypewriter(words, speed = 90, pause = 1400) {
   const [text, setText] = useState('')
@@ -74,10 +74,22 @@ function Hero() {
         </div>
 
         <div className="hero__portrait">
-          <div className="hero__ring">
-            <div className="hero__avatar">VK</div>
+          <div className="hero__code-card">
+            <div className="hero__code-header">
+              <span className="hero__code-dot hero__code-dot--red"></span>
+              <span className="hero__code-dot hero__code-dot--yellow"></span>
+              <span className="hero__code-dot hero__code-dot--green"></span>
+            </div>
+            <pre className="hero__code-body">
+              <code>
+                <span className="code-keyword">const</span> <span className="code-variable">developer</span> = {'{'}
+                <br />  <span className="code-property">name</span>: <span className="code-string">"Vikas Kumar"</span>,
+                <br />  <span className="code-property">skills</span>: [<span className="code-string">"ASP.NET Core"</span>, <span className="code-string">"PostgreSQL"</span>, <span className="code-string">"Redis"</span>],
+                <br />  <span className="code-property">passion</span>: <span className="code-string">"Building scalable APIs"</span>
+                <br />{'}'};
+              </code>
+            </pre>
           </div>
-
         </div>
       </div>
     </section>

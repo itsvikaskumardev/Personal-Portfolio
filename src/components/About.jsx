@@ -1,4 +1,5 @@
 import './About.css'
+import profilePic from '../assests/profile_pic.jpg'
 
 const HIGHLIGHTS = [
   {
@@ -33,7 +34,7 @@ function About() {
         <div className="about__grid">
           <div className="about__portrait">
             <div className="about__frame">
-              <div className="about__avatar">VK</div>
+              <img src={profilePic} alt="Vikas Kumar" className="about__avatar" />
             </div>
             <div className="about__frame-glow" />
           </div>

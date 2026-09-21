@@ -3,14 +3,21 @@ import './ProjectCard.css'
 
 function ProjectCard({ project }) {
   const [isModalOpen, setIsModalOpen] = useState(false)
+  const [isImageModalOpen, setIsImageModalOpen] = useState(false)
+  const [currentImageIndex, setCurrentImageIndex] = useState(0)
 
   const { title, desc, tags, gradient, demoUrl, codeUrl, imageUrl } = project
+  const images = Array.isArray(imageUrl) ? imageUrl : (imageUrl ? [imageUrl] : [])
 
   return (
     <>
       <article className="project-card">
-      <div className="project-card__cover" style={{ backgroundImage: imageUrl ? `url(${imageUrl})` : gradient }}>
-        {!imageUrl && <span className="project-card__cover-glyph">{title.charAt(0)}</span>}
+      <div 
+        className={`project-card__cover ${images.length > 0 ? 'clickable' : ''}`} 
+        style={{ backgroundImage: images.length > 0 ? `url(${images[0]})` : gradient }}
+        onClick={() => { if (images.length > 0) setIsImageModalOpen(true) }}
+      >
+        {!images.length && <span className="project-card__cover-glyph">{title.charAt(0)}</span>}
       </div>
 
       <div className="project-card__body">
@@ -51,6 +58,38 @@ function ProjectCard({ project }) {
               ))}
             </div>
             <button className="btn btn-outline close-btn" onClick={() => setIsModalOpen(false)}>Cancel</button>
+          </div>
+        </div>
+      )}
+      {isImageModalOpen && images.length > 0 && (
+        <div className="demo-modal-overlay image-modal-overlay" onClick={() => setIsImageModalOpen(false)}>
+          <div className="image-slider-modal" onClick={e => e.stopPropagation()}>
+            {images.length > 1 && (
+              <button 
+                className="slider-btn prev-btn" 
+                onClick={(e) => {
+                  e.stopPropagation()
+                  setCurrentImageIndex((prev) => (prev - 1 + images.length) % images.length)
+                }}
+              >
+                &#10094;
+              </button>
+            )}
+            
+            <img src={images[currentImageIndex]} alt={`${title} screenshot`} className="slider-image" />
+            
+            {images.length > 1 && (
+              <button 
+                className="slider-btn next-btn" 
+                onClick={(e) => {
+                  e.stopPropagation()
+                  setCurrentImageIndex((prev) => (prev + 1) % images.length)
+                }}
+              >
+                &#10095;
+              </button>
+            )}
+            <button className="close-slider-btn" onClick={() => setIsImageModalOpen(false)}>&#10005;</button>
           </div>
         </div>
       )}

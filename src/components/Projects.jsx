@@ -3,23 +3,29 @@ import './Projects.css'
 import hmsImage from '../assests/HMS-Image.png'
 import codesyncImage from '../assests/CodeSync.jpg'
 import EkartImage from '../assests/Ekart.png'
-
-
-
+import EkartAdminDashboard from '../assests/Ekart-AdminDashBoard.png'
+import EkartProductDetails from '../assests/Ekart-ProductDetaisl.png'
+import EkartUsers from '../assests/Ekart-Userspng.png'
+import RMSPropertyImage from '../assests/RMS-Property.png'
+import RMSAdminDashboardImage from '../assests/RMS-AdminDashboard.png'
+import RMSBuyerDashboardImage from '../assests/RMS-BuyerDashboard.png'
+import RMSSellerDashboardImage from '../assests/RMS-SellerDashboard.png'
 const PROJECTS = [
+
   {
-    title: 'E-Commerce Platform',
-    desc: 'A full-stack e-commerce platform featuring product management, user authentication, shopping cart functionality, order processing, and secure payment integration.',
-    tags: ['React.js', 'Go', 'Gin', 'Redux', 'PostgreSQL'],
+    title: 'Real Estate Management Platform',
+    desc: 'A full-stack platform for real estate management, featuring property listing, client management, and secure authentication.',
+    tags: ['ASP.NET Core', 'Entity Framework Core ', 'PostgreSQL', 'React', 'Tailwind CSS'],
     gradient: 'linear-gradient(135deg, #6d28d9, #db2777)',
-    demoUrl: 'https://ekart-ecommerce-go.netlify.app/',
-    codeUrl: 'https://github.com/itsvikaskumardev/Ekart-Ecommerce',
-    imageUrl: EkartImage,
+    demoUrl: 'https://real-estate-management-system-three-psi.vercel.app/',
+    codeUrl: 'https://github.com/itsvikaskumardev/Real-Estate-Management-System-',
+    imageUrl: [RMSPropertyImage, RMSBuyerDashboardImage, RMSSellerDashboardImage, RMSAdminDashboardImage],
   },
+
   {
     title: 'Hospital Management System',
     desc: 'A full-stack hospital management application for managing patients, doctors, appointments, and medical records with secure authentication and an intuitive user interface.',
-    tags: ['React.js', 'Express.js', 'Node.js', 'MongoDB'],
+    tags: ['ASP.NET Core', 'Entity Framework Core ', 'PostgreSQL', 'React', 'Tailwind CSS'],
     gradient: 'linear-gradient(135deg, #7c3aed, #4f46e5)',
 
 
@@ -29,6 +35,15 @@ const PROJECTS = [
     ],
     codeUrl: 'https://github.com/itsvikaskumardev/MediCare',
     imageUrl: hmsImage,
+  },
+  {
+    title: 'E-Commerce Platform',
+    desc: 'A full-stack e-commerce platform featuring product management, user authentication, shopping cart functionality, order processing, and secure payment integration.',
+    tags: ['React.js', 'Go', 'Gin', 'Redux', 'PostgreSQL'],
+    gradient: 'linear-gradient(135deg, #6d28d9, #db2777)',
+    demoUrl: 'https://ekart-ecommerce-go.netlify.app/',
+    codeUrl: 'https://github.com/itsvikaskumardev/Ekart-Ecommerce',
+    imageUrl: [EkartImage, EkartAdminDashboard, EkartProductDetails, EkartUsers],
   },
   {
     title: 'Code-Sync',
