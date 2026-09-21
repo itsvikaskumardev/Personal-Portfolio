@@ -1,6 +1,9 @@
 import ProjectCard from './ProjectCard.jsx'
 import './Projects.css'
 import hmsImage from '../assests/HMS-Image.png'
+import hmsAdminDashboard from '../assests/HMS-adminDashboard.png'
+import hmsDoctorDashboard from '../assests/HMS-doctorDashboard.png'
+import hmsServices from '../assests/HMS-Services.png'
 import codesyncImage from '../assests/CodeSync.jpg'
 import EkartImage from '../assests/Ekart.png'
 import EkartAdminDashboard from '../assests/Ekart-AdminDashBoard.png'
@@ -34,7 +37,7 @@ const PROJECTS = [
       { name: 'Patient and Doctor Dashboard ', url: 'https://medicare-care.netlify.app/' }
     ],
     codeUrl: 'https://github.com/itsvikaskumardev/MediCare',
-    imageUrl: hmsImage,
+    imageUrl: [hmsImage, hmsAdminDashboard, hmsDoctorDashboard, hmsServices],
   },
   {
     title: 'E-Commerce Platform',
